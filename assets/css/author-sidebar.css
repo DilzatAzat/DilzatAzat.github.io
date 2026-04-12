@@ -1,0 +1,14 @@
+/* Follow button removed: keep contact links visible on narrow screens */
+@media (max-width: 1023px) {
+  .author__urls-wrapper--no-follow .author__urls {
+    display: block !important;
+    position: relative !important;
+    right: auto !important;
+    margin-top: 0.75rem !important;
+    padding: 0 !important;
+    z-index: 1 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    background: transparent !important;
+  }
+}

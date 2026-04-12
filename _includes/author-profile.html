@@ -20,8 +20,7 @@
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">Follow</button>
+  <div class="author__urls-wrapper author__urls-wrapper--no-follow">
     <ul class="author__urls social-icons">
       <!-- Font Awesome icons / Biographic information  -->
       {% if author.location %}

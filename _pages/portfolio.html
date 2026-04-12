@@ -12,3 +12,6 @@ author_profile: true
   {% include archive-single.html %}
 {% endfor %}
 
+{% if site.portfolio.size == 0 %}
+  <p>这里还没有展示内容；在仓库 <code>_portfolio/</code> 里添加条目后会自动出现在此页。</p>
+{% endif %}
