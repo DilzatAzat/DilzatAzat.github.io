@@ -15,7 +15,8 @@ name                     : &name "Dilzat Azat"
 description              : &description "Dilzat Azat's academic portfolio"
 url                      : https://dilzatazat.github.io
 baseurl                  : ""
-repository               : "DilzatAzat/Dilzat.github.io"
+# 用户主页：仓库名必须与 GitHub 用户名一致 → Dilzatazat.github.io（不能叫 Dilzat.github.io，否则只是项目页，根域名会 404）
+repository               : "DilzatAzat/Dilzatazat.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
