@@ -12,7 +12,7 @@ site_theme               : "default" # The available themes options are "default
 title                    : "Dilzat Azat"
 title_separator          : "-"
 name                     : &name "Dilzat Azat"
-description              : &description "Dilzat Azat's academic portfolio"
+description              : &description "Dilzat Azat，关注人工智能、深度学习与 AI for Science。"
 url                      : https://dilzatazat.github.io
 baseurl                  : ""
 # 用户主页：仓库名必须与 GitHub 用户名一致 → Dilzatazat.github.io（不能叫 Dilzat.github.io，否则只是项目页，根域名会 404）
@@ -26,9 +26,9 @@ author:
   avatar           : "profile.png"
   name             : "Dilzat Azat"
   pronouns         : # example: "she/her"  
-  bio              : "Academic portfolio and personal site."
-  location         : "Earth"
-  employer         : # e.g. your institution
+  bio              : "中国科学技术大学本科生，关注人工智能、深度学习与 AI for Science。"
+  location         :
+  employer         : "中国科学技术大学"
   uri              : # URL
   email            : "rolanddilzat@gmail.com"
 

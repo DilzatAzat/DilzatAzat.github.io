@@ -114,3 +114,11 @@
 - Updated the public Learn and About status labels so they no longer describe the completed course as under repair or in progress.
 - Release preflight passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, and `git diff --check` all completed successfully; Jekyll emitted only the existing Logger/Faraday environment warnings.
 - Verified all 25 configured lesson routes, the complete 00-24 Previous/Next chain in source and rendered HTML, and 1,401 Learn-link references across 26 unique internal targets with no missing destination.
+
+## 2026-09-09 - Minimal public homepage refinement
+
+- Reduced the visible top navigation to the brand, Learn, and the existing theme toggle. Publications, Talks, Teaching, Portfolio, Blog Posts, CV, and Guide entries remain commented in `_data/navigation.yml`; their pages, collections, routes, and files were not deleted.
+- Replaced the root page's Academic Pages welcome/template copy with a concise Simplified Chinese profile, Current Focus list, and a single Python for AI learning entry at `/learn/python/`.
+- Updated the sidebar author bio to the user-provided USTC/AI identity and removed the template placeholder location `Earth`; existing verified email and GitHub links were retained.
+- Verification passed: Jekyll build, `node --check assets/js/learning.js`, and `git diff --check`; `/`, `/learn/`, and `/learn/python/` generated successfully, homepage links resolve, and template-residual scanning passed.
+- Responsive spot checks passed at 1280px desktop and 390px mobile. Both viewports have no horizontal overflow; mobile navigation remains usable and Learn is visible.
