@@ -1,0 +1,51 @@
+title: Python for AI
+subtitle: 面向深度学习的实用 Python 前置课程。
+storage_key: python-for-ai-progress-v1
+total_lessons: 25
+modules:
+  - number: 0
+    title: 入门与工作流
+    lessons:
+      - { id: "00", title: 课程说明（Course Guide）, url: /learn/python/course-guide/ }
+      - { id: "01", title: Python 环境与工作流, url: /learn/python/environment/ }
+  - number: 1
+    title: Python 基础
+    lessons:
+      - { id: "02", title: 变量、对象与基本类型, url: /learn/python/variables/ }
+      - { id: "03", title: 字符串（String）, url: /learn/python/strings/ }
+      - { id: "04", title: 列表与元组（List & Tuple）, url: /learn/python/lists/ }
+      - { id: "05", title: 字典与集合（Dict & Set）, url: /learn/python/dicts-sets/ }
+      - { id: "06", title: 索引、切片与容器操作, url: /learn/python/indexing-slicing/ }
+  - number: 2
+    title: 控制流
+    lessons:
+      - { id: "07", title: 比较、布尔逻辑与 if, url: /learn/python/if-logic/ }
+      - { id: "08", title: for、while 与 range, url: /learn/python/loops/ }
+      - { id: "09", title: enumerate、zip、break 与 continue, url: /learn/python/loop-tools/ }
+      - { id: "10", title: 推导式（Comprehensions）, url: /learn/python/comprehensions/ }
+  - number: 3
+    title: 函数与 Pythonic 写法
+    lessons:
+      - { id: "11", title: 函数、参数与返回值, url: /learn/python/functions/ }
+      - { id: "12", title: 灵活的函数参数, url: /learn/python/function-parameters/ }
+      - { id: "13", title: 作用域、模块与 import, url: /learn/python/modules-scope/ }
+      - { id: "14", title: 解包、lambda 与常见 Pythonic 写法, url: /learn/python/pythonic/ }
+  - number: 4
+    title: 实用 Python
+    lessons:
+      - { id: "15", title: 文件、Path 与 JSON, url: /learn/python/files-json/ }
+      - { id: "16", title: 异常与 Debugging, url: /learn/python/exceptions-debugging/ }
+      - { id: "17", title: 面向 AI 代码的类（Classes）, url: /learn/python/classes/ }
+      - { id: "18", title: Type Hint、Dataclass 与测试基础, url: /learn/python/types-testing/ }
+  - number: 5
+    title: NumPy 与科学 Python
+    lessons:
+      - { id: "19", title: NumPy 基础：ndarray、shape、dtype、axis, url: /learn/python/numpy-basics/ }
+      - { id: "20", title: NumPy 数据操作：向量化、广播与聚合, url: /learn/python/numpy-operations/ }
+      - { id: "21", title: NumPy Random、Matplotlib 与 Jupyter 实战, url: /learn/python/numpy-tools/ }
+  - number: 6
+    title: 通往深度学习
+    lessons:
+      - { id: "22", title: PyTorch Tensor 基础, url: /learn/python/tensors/ }
+      - { id: "23", title: Broadcasting、Autograd 与 DataLoader 预览, url: /learn/python/tensor-bridge/ }
+      - { id: "24", title: 阅读 D2L 代码与准备度检查, url: /learn/python/d2l-readiness/ }

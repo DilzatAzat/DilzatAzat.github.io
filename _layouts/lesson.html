@@ -1,0 +1,45 @@
+---
+layout: default
+---
+{% include base_path %}
+<main class="lesson-shell" data-course="python-for-ai" data-storage-key="{{ site.data.python_course.storage_key }}" data-total-lessons="{{ site.data.python_course.total_lessons }}" data-lesson-id="{{ page.lesson_id }}">
+  <aside class="course-nav" aria-label="Python for AI 课程目录">
+    <details class="course-nav__mobile">
+      <summary><span>课程目录</span><span data-course-progress-short>0 / {{ site.data.python_course.total_lessons }}</span></summary>
+      <div class="course-nav__scroll">{% include python-course-nav.html %}</div>
+    </details>
+    <div class="course-nav__desktop course-nav__scroll">{% include python-course-nav.html %}</div>
+  </aside>
+
+  <article class="lesson" itemscope itemtype="http://schema.org/LearningResource">
+    <header class="lesson__header">
+      <a class="lesson__course-link" href="{{ '/learn/python/' | relative_url }}">Python for AI</a>
+      <p>模块 {{ page.module }} · 第 {{ page.lesson_id }} 课</p>
+      <h1 itemprop="name">{{ page.title }}</h1>
+      {% if page.description %}<p class="lesson__dek">{{ page.description }}</p>{% endif %}
+    </header>
+    <div class="lesson__content" itemprop="text">{{ content }}</div>
+
+    <div class="lesson-completion">
+      <div>
+        <strong>第 {{ page.lesson_id }} 课</strong>
+        <span>学习进度仅保存在当前浏览器。</span>
+      </div>
+      <button type="button" class="lesson-completion__button" data-complete-lesson>
+        <span aria-hidden="true">&#10003;</span>
+        <span>标记为已完成</span>
+      </button>
+    </div>
+
+    <nav class="lesson-pagination" aria-label="课程导航">
+      {% if page.previous_url %}<a class="lesson-pagination__previous" href="{{ page.previous_url | relative_url }}"><span>上一课</span><strong>{{ page.previous_title }}</strong></a>{% else %}<span></span>{% endif %}
+      {% if page.next_url %}<a class="lesson-pagination__next" href="{{ page.next_url | relative_url }}"><span>下一课</span><strong>{{ page.next_title }}</strong></a>{% else %}<a class="lesson-pagination__next" href="{{ '/learn/python/' | relative_url }}"><span>课程首页</span><strong>查看全部 lesson</strong></a>{% endif %}
+    </nav>
+  </article>
+
+  <aside class="lesson-toc" aria-label="本页目录">
+    <strong>本页目录</strong>
+    <nav data-lesson-toc></nav>
+  </aside>
+</main>
+<script defer src="{{ '/assets/js/learning.js' | relative_url }}"></script>
