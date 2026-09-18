@@ -122,3 +122,17 @@
 - Updated the sidebar author bio to the user-provided USTC/AI identity and removed the template placeholder location `Earth`; existing verified email and GitHub links were retained.
 - Verification passed: Jekyll build, `node --check assets/js/learning.js`, and `git diff --check`; `/`, `/learn/`, and `/learn/python/` generated successfully, homepage links resolve, and template-residual scanning passed.
 - Responsive spot checks passed at 1280px desktop and 390px mobile. Both viewports have no horizontal overflow; mobile navigation remains usable and Learn is visible.
+
+## 2026-09-09 - Release push blocked
+
+- Local release commit `d0b5dd5` was created successfully with message `feat: launch personal homepage and Python for AI course`.
+- Two unchanged ordinary push attempts to `origin master` failed before remote update: first `Recv failure: Connection was reset`, then `Failed to connect to github.com port 443 after 21211 ms: Could not connect to server`.
+- No force push, history rewrite, remote/configuration change, workflow change, or deployment attempt was made. Actions/Pages status remains pending until network access is restored.
+
+## 2026-09-09 - Home/Learn information architecture
+
+- Removed the homepage `Current Learning` course section and the remaining Python-to-D2L route wording from `Current Focus`, keeping the page identity and contact focused.
+- Replaced `/learn/`'s linear AI roadmap with a dedicated `learning-catalog` layout backed by `_data/learning_catalog.yml`; only visible catalog items render, currently one Python for AI card under Programming & Foundations.
+- Reserved future catalog entries (C++, Machine Learning, D2L, Deep Learning, LLM, Multimodal, AI Systems, English/IELTS) in data with `visible: false`; no empty categories are shown.
+- Verification passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, `git diff --check`, generated routes `/`, `/learn/`, `/learn/python/`, and all 25 lesson directories. Responsive visual checks passed at 1280px and 390px; no horizontal overflow observed.
+- No commit, push, deploy, Python lesson edits, collection-data edits, or navigation changes were made.

@@ -1,0 +1,60 @@
+# Public learning catalog. Keep future material here until it has a real page.
+categories:
+  - id: programming
+    title: Programming & Foundations
+    items:
+      - id: python-for-ai
+        title: Python for AI
+        url: /learn/python/
+        description: 面向深度学习的 Python 前置课程。
+        lesson_count: 25
+        status: published
+        visible: true
+      - id: cpp
+        title: C++
+        description: 面向系统与高性能计算的编程基础。
+        status: planned
+        visible: false
+  - id: machine-learning
+    title: Machine Learning
+    items:
+      - id: machine-learning
+        title: Machine Learning
+        status: planned
+        visible: false
+      - id: d2l
+        title: Dive into Deep Learning
+        status: planned
+        visible: false
+  - id: deep-learning
+    title: Deep Learning
+    items:
+      - id: deep-learning
+        title: Deep Learning
+        status: planned
+        visible: false
+  - id: foundation-models
+    title: Foundation Models
+    items:
+      - id: llm
+        title: LLM
+        status: planned
+        visible: false
+      - id: multimodal
+        title: Multimodal
+        status: planned
+        visible: false
+  - id: ai-systems
+    title: AI Systems
+    items:
+      - id: ai-systems
+        title: AI Systems
+        status: planned
+        visible: false
+  - id: languages
+    title: Languages
+    items:
+      - id: english-ielts
+        title: English / IELTS
+        status: planned
+        visible: false

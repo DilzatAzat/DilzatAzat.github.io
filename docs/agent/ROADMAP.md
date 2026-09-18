@@ -24,6 +24,12 @@ Status values: `TODO`, `IN_PROGRESS`, `BLOCKED`, `DONE`.
 - **Acceptance criteria:** Learn link appears in the established navigation pattern; existing navigation links remain unchanged and build successfully.
 - **Dependencies:** P0-2
 
+### P0-4 Separate Home and Learn information architecture
+- **Status:** DONE
+- **Goal:** Keep the homepage identity-focused and make `/learn/` a data-driven catalog for published learning content.
+- **Acceptance criteria:** Homepage has no course or learning-path section; `/learn/` renders only visible catalog items; `/learn/python/` and its lesson experience remain unchanged.
+- **Dependencies:** P0-3
+
 ## P1 - Course Framework
 
 ### P1-1 Python for AI course landing page

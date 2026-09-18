@@ -1,0 +1,32 @@
+---
+layout: default
+---
+<main class="learn-page learning-catalog-page">
+  <header class="learn-page__header">
+    <p>学习</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="learn-page__dek">{{ page.description }}</p>{% endif %}
+  </header>
+  <div class="learn-page__content">
+    {% for category in site.data.learning_catalog.categories %}
+      {% assign visible_items = category.items | where: "visible", true %}
+      {% if visible_items.size > 0 %}
+        <section class="learning-category" aria-labelledby="category-{{ category.id }}">
+          <header class="learning-category__header">
+            <h2 id="category-{{ category.id }}">{{ category.title }}</h2>
+          </header>
+          <div class="learning-catalog__grid">
+            {% for item in visible_items %}
+              <article class="learning-card">
+                <h3>{{ item.title }}</h3>
+                {% if item.description %}<p>{{ item.description }}</p>{% endif %}
+                {% if item.lesson_count %}<p class="learning-card__meta">{{ item.lesson_count }} lessons</p>{% endif %}
+                {% if item.url %}<a class="learn-action" href="{{ item.url | relative_url }}">进入 {{ item.title }} <span aria-hidden="true">&rarr;</span></a>{% endif %}
+              </article>
+            {% endfor %}
+          </div>
+        </section>
+      {% endif %}
+    {% endfor %}
+  </div>
+</main>
