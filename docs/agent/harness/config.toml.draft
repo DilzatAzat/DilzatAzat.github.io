@@ -1,0 +1,5 @@
+[multi_agent_v2]
+max_concurrent_threads_per_session = 4
+usage_hint_enabled = true
+usage_hint_text = "For non-trivial tasks, use the full-cycle-engineering workflow: plan/explore, implement, verify, independently review, repair, and accept."
+subagent_developer_instructions = "Read-only Planner/Explorer/Reviewer agents must not edit files. Use one write-capable Coder for overlapping files. Boss validates findings and stops on unsafe or unresolved blockers."

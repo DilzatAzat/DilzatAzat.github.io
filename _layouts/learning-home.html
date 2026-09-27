@@ -1,7 +1,12 @@
 ---
 layout: default
 ---
-<main class="learn-page" data-course="python-for-ai" data-storage-key="{{ site.data.python_course.storage_key }}" data-total-lessons="{{ site.data.python_course.total_lessons }}">
+{% assign course_data_key = page.course_data | default: 'python_course' %}
+{% assign course_data = site.data[course_data_key] %}
+{% assign course_id = page.course_id | default: course_data.id | default: 'python-for-ai' %}
+{% assign course_storage_key = course_data.storage_key | default: 'python-for-ai-progress-v1' %}
+{% assign course_total_lessons = course_data.total_lessons | default: 0 %}
+<main class="learn-page" data-course="{{ course_id }}" data-storage-key="{{ course_storage_key }}" data-total-lessons="{{ course_total_lessons }}">
   <header class="learn-page__header">
     {% if page.eyebrow %}<p>{{ page.eyebrow }}</p>{% endif %}
     <h1>{{ page.title }}</h1>

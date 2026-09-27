@@ -1,0 +1,41 @@
+id: engineering-agent-for-ai
+title: Engineering & Agent for AI
+subtitle: 面向 AI 项目的工程基础与 Agent Engineering 实践课程。
+home: /learn/engineering-agent-for-ai/
+storage_key: engineering-agent-for-ai-progress-v1
+total_lessons: 16
+modules:
+  - number: 0
+    title: Foundations
+    lessons:
+      - { id: "00", title: 课程说明：从 AI 项目到工程闭环, url: /learn/engineering-agent-for-ai/course-guide/ }
+      - { id: "01", title: Git 仓库与 GitHub 工作流, url: /learn/engineering-agent-for-ai/git-workflow/ }
+      - { id: "02", title: 分支、冲突与 AI 项目安全边界, url: /learn/engineering-agent-for-ai/git-collaboration-safety/ }
+  - number: 1
+    title: Local to Remote
+    lessons:
+      - { id: "03", title: Windows、PowerShell、WSL2 与 Linux, url: /learn/engineering-agent-for-ai/windows-wsl-linux/ }
+      - { id: "04", title: Shell、环境变量与进程, url: /learn/engineering-agent-for-ai/shell-runtime-basics/ }
+      - { id: "05", title: SSH、远程服务器与 tmux, url: /learn/engineering-agent-for-ai/ssh-tmux-server/ }
+  - number: 2
+    title: Reproducible AI Environment
+    lessons:
+      - { id: "06", title: Python 环境与依赖管理, url: /learn/engineering-agent-for-ai/python-environments/ }
+      - { id: "07", title: CUDA、驱动与 PyTorch 环境心智模型, url: /learn/engineering-agent-for-ai/cuda-pytorch-stack/ }
+  - number: 3
+    title: Containers
+    lessons:
+      - { id: "08", title: Docker Image、Container、Volume 与 Port, url: /learn/engineering-agent-for-ai/docker-mental-model/ }
+      - { id: "09", title: Docker Compose 与多服务项目, url: /learn/engineering-agent-for-ai/docker-compose/ }
+  - number: 4
+    title: Agent Engineering
+    lessons:
+      - { id: "10", title: Agent Engineering mental model, url: /learn/engineering-agent-for-ai/agent-engineering-model/ }
+      - { id: "11", title: AGENTS.md 与 Skills, url: /learn/engineering-agent-for-ai/agents-skills/ }
+      - { id: "12", title: Harness、Subagents 与工程闭环, url: /learn/engineering-agent-for-ai/harness-subagents/ }
+      - { id: "13", title: MCP、Hooks 与 Evals, url: /learn/engineering-agent-for-ai/mcp-hooks-evals/ }
+  - number: 5
+    title: Integrated Project
+    lessons:
+      - { id: "14", title: 构建可复用的 AI Project Template, url: /learn/engineering-agent-for-ai/integrated-project/ }
+      - { id: "15", title: 综合调试与发布检查, url: /learn/engineering-agent-for-ai/capstone-debug-release/ }

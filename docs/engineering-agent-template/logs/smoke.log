@@ -1,0 +1,5 @@
+ai-project-template smoke ok
+Ran 1 test in 0.000s
+OK
+python evals/run_evals.py
+ok=true, normal_template=true, missing_agents_fixture=true, env_fixture_ignored=true

@@ -2,18 +2,25 @@
 layout: default
 ---
 {% include base_path %}
-<main class="lesson-shell" data-course="python-for-ai" data-storage-key="{{ site.data.python_course.storage_key }}" data-total-lessons="{{ site.data.python_course.total_lessons }}" data-lesson-id="{{ page.lesson_id }}">
-  <aside class="course-nav" aria-label="Python for AI 课程目录">
+{% assign course_data_key = page.course_data | default: 'python_course' %}
+{% assign course_data = site.data[course_data_key] %}
+{% assign course_id = page.course_id | default: course_data.id | default: 'python-for-ai' %}
+{% assign course_home = page.course_home | default: course_data.home | default: '/learn/python/' %}
+{% assign course_title = page.course_title | default: course_data.title | default: 'Python for AI' %}
+{% assign course_storage_key = course_data.storage_key | default: 'python-for-ai-progress-v1' %}
+{% assign course_total_lessons = course_data.total_lessons | default: 0 %}
+<main class="lesson-shell" data-course="{{ course_id }}" data-storage-key="{{ course_storage_key }}" data-total-lessons="{{ course_total_lessons }}" data-lesson-id="{{ page.lesson_id }}">
+  <aside class="course-nav" aria-label="{{ course_title }} 课程目录">
     <details class="course-nav__mobile">
-      <summary><span>课程目录</span><span data-course-progress-short>0 / {{ site.data.python_course.total_lessons }}</span></summary>
-      <div class="course-nav__scroll">{% include python-course-nav.html %}</div>
+      <summary><span>课程目录</span><span data-course-progress-short>0 / {{ course_total_lessons }}</span></summary>
+      <div class="course-nav__scroll">{% include course-nav.html course_data=course_data course_home=course_home course_title=course_title %}</div>
     </details>
-    <div class="course-nav__desktop course-nav__scroll">{% include python-course-nav.html %}</div>
+    <div class="course-nav__desktop course-nav__scroll">{% include course-nav.html course_data=course_data course_home=course_home course_title=course_title %}</div>
   </aside>
 
   <article class="lesson" itemscope itemtype="http://schema.org/LearningResource">
     <header class="lesson__header">
-      <a class="lesson__course-link" href="{{ '/learn/python/' | relative_url }}">Python for AI</a>
+      <a class="lesson__course-link" href="{{ course_home | relative_url }}">{{ course_title }}</a>
       <p>模块 {{ page.module }} · 第 {{ page.lesson_id }} 课</p>
       <h1 itemprop="name">{{ page.title }}</h1>
       {% if page.description %}<p class="lesson__dek">{{ page.description }}</p>{% endif %}
@@ -33,7 +40,7 @@ layout: default
 
     <nav class="lesson-pagination" aria-label="课程导航">
       {% if page.previous_url %}<a class="lesson-pagination__previous" href="{{ page.previous_url | relative_url }}"><span>上一课</span><strong>{{ page.previous_title }}</strong></a>{% else %}<span></span>{% endif %}
-      {% if page.next_url %}<a class="lesson-pagination__next" href="{{ page.next_url | relative_url }}"><span>下一课</span><strong>{{ page.next_title }}</strong></a>{% else %}<a class="lesson-pagination__next" href="{{ '/learn/python/' | relative_url }}"><span>课程首页</span><strong>查看全部 lesson</strong></a>{% endif %}
+      {% if page.next_url %}<a class="lesson-pagination__next" href="{{ page.next_url | relative_url }}"><span>下一课</span><strong>{{ page.next_title }}</strong></a>{% else %}<a class="lesson-pagination__next" href="{{ course_home | relative_url }}"><span>课程首页</span><strong>查看全部 lesson</strong></a>{% endif %}
     </nav>
   </article>
 

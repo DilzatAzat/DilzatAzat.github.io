@@ -136,3 +136,42 @@
 - Reserved future catalog entries (C++, Machine Learning, D2L, Deep Learning, LLM, Multimodal, AI Systems, English/IELTS) in data with `visible: false`; no empty categories are shown.
 - Verification passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, `git diff --check`, generated routes `/`, `/learn/`, `/learn/python/`, and all 25 lesson directories. Responsive visual checks passed at 1280px and 390px; no horizontal overflow observed.
 - No commit, push, deploy, Python lesson edits, collection-data edits, or navigation changes were made.
+
+## 2026-09-19 - Codex Engineering Harness setup
+
+- Confirmed local Codex CLI version `0.155.0-alpha.9`, stable `multi_agent` feature, no configured MCP servers, and no existing `~/.agents/skills/` directory.
+- Added the Boss/Lead full-cycle orchestration policy to the repository `AGENTS.md` and copied the same policy to global `C:\Users\ROG\.codex\AGENTS.md` without changing existing site safety rules.
+- Prepared auditable staging copies for `full-cycle-engineering`, `bugfix`, `code-review`, and `experiment` under `docs/agent/harness/`.
+- Persistent global `config.toml` and new global Skill directories were protected by the current filesystem policy; no unsafe overwrite, MCP installation, Hook installation, model change, push, deploy, or blog-content change was made.
+- Official Codex manual retrieval was attempted but blocked by the local TLS/automatic-review environment; configuration claims are limited to capabilities verified from the installed CLI and binary schema.
+
+- Verification: sanitized Harness TOML draft parsed successfully with Python `tomllib`; `git diff --check` passed after trimming STATE.md. `bundle exec jekyll build` was attempted and failed on the pre-existing missing `vendor/breakpoint/breakpoint` Sass import; no site source was changed to mask it.
+
+## 2026-09-19 - Harness v1 official path recheck
+
+- Retried the official global Skill path `C:\Users\ROG\.agents\skills`; creation was denied by the current filesystem ACL.
+- Created the project `.agents\skills` root as the requested fallback, but its ACL denies creating Skill subdirectories or writing files.
+- Retried project and global custom-agent locations under `.codex\agents`; both are protected and unavailable. Prepared final three-field `planner.toml` and `reviewer.toml` staging drafts using `name`, `description`, and `developer_instructions` only.
+- No `.codex\config.toml` change, MCP, Hook, model, or blog-content change was made. The remaining blocker is official-path filesystem permission plus the unavailable automatic approval reviewer (HTTP 404).
+
+- Added the explicit Boss orchestration sequence, built-in Explorer/Worker routing, fresh-review requirement, overlap rule, trivial-task exception, and two-cycle repair limit to the project AGENTS.md. The already-populated global AGENTS.md could not be rewritten a second time because its protected ACL now denies writes; the complete wording remains in docs/agent/harness/AGENTS.global.md for the next permitted installation.
+
+## 2026-09-24 - Engineering & Agent for AI course
+
+- Added a visible `Engineering & Agent for AI` catalog entry with an isolated `engineering-agent-for-ai-progress-v1` storage key and a six-module, 16-lesson path from Git and Windows/WSL/Linux through Python/CUDA, Docker, Agent Engineering, and a reusable AI Project Template capstone.
+- Generalized the lesson shell and course home to read per-course metadata while retaining the Python compatibility include and Python defaults; no existing Python routes or progress keys were changed.
+- Link-checked official Git, GitHub, Microsoft WSL, Python Packaging, uv, Conda, PyTorch, NVIDIA, Docker, OpenAI Codex, and MCP reference pages.
+- Verification passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, `git diff --check`, all 16 engineering lesson routes, Python home/course-guide routes, generated sidebar links, and distinct Python/engineering storage keys. Jekyll emitted only the existing Logger/Faraday warnings.
+- Docker/GPU/pytest execution was unavailable in this runtime; those examples remain statically reviewed with safe CPU alternatives. No push or deploy was attempted.
+
+## 2026-09-27 - Final course UI smoke check
+
+- Rendered the generated Engineering & Agent for AI course home through a local browser preview. The page showed the course title, goals, prerequisites, progress bar, start link, six module sections, and all 16 lesson links without a visible layout failure.
+- Closed the temporary preview and stopped the local server after the check. No external site was contacted and no deployment action was taken.
+
+## 2026-09-27 - Independent audit repair and quality gate
+
+- Repaired the audit P1 findings: corrected the CUDA CPU probe and toolkit/runtime explanation, established the `main` branch before later Git exercises, created the SSH log directory, made the Compose example runnable with a health endpoint, aligned Skills with `.agents/skills`, and added executable Agent/Harness/MCP/Eval practice.
+- Added `docs/engineering-agent-template/` with a CPU-first package, tests, checker, current Skill path, harness evidence files, Docker/Compose files, smoke log, diagnostic report, and disposable eval fixtures for missing `AGENTS.md` and ignored `.env`.
+- Verification passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, `git diff --check`, template `check_env.py`, unit smoke test, `check_project.py`, `evals/run_evals.py`, Python compileall, 17 Engineering generated pages, 26 Python generated pages, complete navigation chain, and isolated progress keys.
+- Fresh independent review returned **A — no P0/P1/P2 findings**. Docker runtime remains unexecuted because Docker is unavailable; Compose was statically reviewed and the limitation is documented. No push or deploy was attempted.

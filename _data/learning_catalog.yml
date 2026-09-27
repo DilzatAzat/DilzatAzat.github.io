@@ -47,6 +47,13 @@ categories:
   - id: ai-systems
     title: AI Systems
     items:
+      - id: engineering-agent-for-ai
+        title: Engineering & Agent for AI
+        url: /learn/engineering-agent-for-ai/
+        description: 面向 AI 项目的工程基础与 Agent Engineering 实践课程。
+        lesson_count: 16
+        status: published
+        visible: true
       - id: ai-systems
         title: AI Systems
         status: planned

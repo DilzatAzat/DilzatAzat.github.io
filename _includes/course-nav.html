@@ -1,0 +1,30 @@
+{% assign nav_data = include.course_data | default: site.data.python_course %}
+{% assign nav_home = include.course_home | default: '/learn/python/' %}
+{% assign nav_title = include.course_title | default: nav_data.title | default: 'Python for AI' %}
+<div class="course-nav__heading">
+  <a href="{{ nav_home | relative_url }}">{{ nav_title }}</a>
+  <span data-course-progress-short>0 / {{ nav_data.total_lessons }}</span>
+</div>
+{% for module in nav_data.modules %}
+  <section class="course-nav__module">
+    <h2>模块 {{ module.number }} <span>{{ module.title }}</span></h2>
+    <ol>
+      {% for lesson in module.lessons %}
+        <li data-lesson-row="{{ lesson.id }}"{% if page.lesson_id == lesson.id %} class="is-current"{% endif %}>
+          {% if lesson.url %}
+            <a href="{{ lesson.url | relative_url }}"{% if page.lesson_id == lesson.id %} aria-current="page"{% endif %}>
+              <span class="lesson-number">{{ lesson.id }}</span>
+              <span>{{ lesson.title }}</span>
+              <span class="completion-check" aria-hidden="true">&#10003;</span>
+            </a>
+          {% else %}
+            <span class="is-planned" title="即将发布">
+              <span class="lesson-number">{{ lesson.id }}</span>
+              <span>{{ lesson.title }}</span>
+            </span>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+{% endfor %}

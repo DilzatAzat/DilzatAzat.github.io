@@ -1,0 +1,11 @@
+services:
+  preview:
+    build: .
+    command: ["python", "-m", "ai_project.web"]
+    ports:
+      - "8000:8000"
+    volumes:
+      - ai-project-data:/app/data
+
+volumes:
+  ai-project-data:
