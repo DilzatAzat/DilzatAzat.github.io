@@ -181,3 +181,14 @@
 - Pushed release commit `a4c63d9f6dca6ca618dfb22e24c215b492dc9f1b` to `master` using the already-running local SSRDOG HTTP proxy as a command-scoped Git setting; no Git, Windows, DNS, firewall, TLS, or system proxy configuration changed.
 - GitHub Actions run `36525182514` completed successfully for both build and deploy jobs; Pages deployment `6727233424` targets the release SHA and environment `github-pages`.
 - Live checks passed through the same proxy for `/`, `/learn/`, `/learn/python/`, Engineering course home, representative early and middle lessons, and the capstone. Direct outbound Git TCP 443 remains unavailable; the local command-scoped proxy is the documented non-global workaround.
+
+## 2026-09-29 - Homepage profile text update
+
+- Updated `_pages/about.md` with the requested Chinese display name `Dilzat（迪里扎提）`, USTC sentence, and `AI for Science（RNA 相关）` research focus.
+- Removed the homepage greeting, prior broad-interest paragraph, current-stage paragraph, and `Current Focus / 当前关注` section. Sidebar profile content and unrelated `talkmap_out.ipynb` work were preserved.
+- Verification passed: `bundle exec jekyll build` and `git diff --check`; generated `_site/index.html` contains the new title and text and no longer contains the removed homepage section or greeting.
+
+## 2026-09-29 - Header and sidebar profile update
+
+- Changed only the visible masthead brand label to `profile` in `_includes/masthead.html`; the site and SEO title in `_config.yml` remain unchanged.
+- Replaced the sidebar author bio in `_config.yml` with the requested USTC BS/MS education lines and rendered line breaks.
