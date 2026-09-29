@@ -175,3 +175,9 @@
 - Added `docs/engineering-agent-template/` with a CPU-first package, tests, checker, current Skill path, harness evidence files, Docker/Compose files, smoke log, diagnostic report, and disposable eval fixtures for missing `AGENTS.md` and ignored `.env`.
 - Verification passed: `bundle exec jekyll build`, `node --check assets/js/learning.js`, `git diff --check`, template `check_env.py`, unit smoke test, `check_project.py`, `evals/run_evals.py`, Python compileall, 17 Engineering generated pages, 26 Python generated pages, complete navigation chain, and isolated progress keys.
 - Fresh independent review returned **A — no P0/P1/P2 findings**. Docker runtime remains unexecuted because Docker is unavailable; Compose was statically reviewed and the limitation is documented. No push or deploy was attempted.
+
+## 2026-09-29 - Release and Pages verification
+
+- Pushed release commit `a4c63d9f6dca6ca618dfb22e24c215b492dc9f1b` to `master` using the already-running local SSRDOG HTTP proxy as a command-scoped Git setting; no Git, Windows, DNS, firewall, TLS, or system proxy configuration changed.
+- GitHub Actions run `36525182514` completed successfully for both build and deploy jobs; Pages deployment `6727233424` targets the release SHA and environment `github-pages`.
+- Live checks passed through the same proxy for `/`, `/learn/`, `/learn/python/`, Engineering course home, representative early and middle lessons, and the capstone. Direct outbound Git TCP 443 remains unavailable; the local command-scoped proxy is the documented non-global workaround.
