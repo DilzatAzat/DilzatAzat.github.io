@@ -197,3 +197,9 @@
 
 - Committed the homepage/profile changes as `50da33b` (`Update homepage profile content`) and pushed `master` to `origin` through the existing command-scoped local proxy.
 - Confirmed `origin/master` resolves to `50da33b0b76188fd5a13da101e4c3bea5d696fb0`; unrelated `talkmap_out.ipynb` remains uncommitted.
+
+## 2026-09-29 - Learn catalog layout repair
+
+- Removed the visible `/learn/` intro header while retaining page metadata for SEO.
+- Tightened catalog top spacing, category separation, grid gaps, and card padding so published courses start near the top and planned categories remain visually separated.
+- Verification passed: `bundle exec jekyll build`, `git diff --check`, generated `/learn/` content checks, and a local desktop browser preview; both published course links remain visible and functional.

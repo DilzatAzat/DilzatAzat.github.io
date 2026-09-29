@@ -106,6 +106,30 @@
   .learn-action { margin-top: 0.65rem; }
 }
 
+.learning-catalog-page {
+  padding-top: 2rem;
+
+  .learn-page__content > section {
+    padding: 1.5rem 0;
+  }
+
+  .learn-page__content > section:first-child {
+    padding-top: 0;
+  }
+
+  .learning-category__header h2 {
+    margin-bottom: 0.75rem;
+  }
+
+  .learning-catalog__grid {
+    gap: 0.75rem;
+  }
+
+  .learning-card {
+    padding: 1rem 1.1rem 0.9rem;
+  }
+}
+
 .course-facts {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
