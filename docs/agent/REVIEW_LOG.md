@@ -208,5 +208,12 @@
 
 - Added the four GitHub Pages apex A records for `dilzat.com` in Aliyun DNS and saved `www CNAME -> dilzatazat.github.io` with both records enabled.
 - Updated Jekyll `url` to `https://dilzat.com` and added the root `CNAME` file containing `dilzat.com`.
-- GitHub Pages settings could not yet be opened because the browser session is logged out; GitHub returned 404 for the settings URL. No GitHub repository or Pages setting was changed.
+- GitHub Pages settings could not yet be opened because the browser session is logged out; GitHub returned 404 for the settings URL. The repository change was pushed separately; the Pages custom-domain setting remains pending.
 - `talkmap_out.ipynb` remains unrelated and unstaged.
+
+## 2026-09-30 - Custom domain release verification
+
+- Pushed commit `41ea7e95d5666fd5935fa693f68c1238fdef9272` to `origin/master` through the command-scoped local proxy; `talkmap_out.ipynb` was not staged.
+- GitHub Actions run `36609941670` and the `github-pages` deployment for that commit completed successfully. The default `https://dilzatazat.github.io/` site renders the updated build.
+- DNS resolves correctly, but the Pages deployment environment still reports `https://dilzatazat.github.io/`; `https://dilzat.com` currently returns HTTP 404 and HTTPS certificate-name mismatch while the custom-domain setting/certificate is pending.
+- Remaining human step: authenticate to GitHub, set repository Pages custom domain to `dilzat.com`, then enable Enforce HTTPS after certificate issuance.

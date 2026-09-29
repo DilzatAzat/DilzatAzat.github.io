@@ -2,8 +2,8 @@
 
 ```yaml
 current_phase: CUSTOM DOMAIN CONFIGURATION
-current_task: Configure dilzat.com for GitHub Pages
-last_completed_task: Added Aliyun DNS records and local GitHub Pages custom-domain files
+current_task: Finish GitHub Pages custom-domain activation for dilzat.com
+last_completed_task: Pushed domain configuration and verified successful Pages build/deployment
 build_status: passed-existing-logger-faraday-warnings
 known_problems:
   - Official global C:\\Users\\ROG\\.agents\\skills, project .agents\\skills subdirectories, and project/global .codex\\agents are protected by the current filesystem policy; Skills and custom agents remain staged only
@@ -14,7 +14,7 @@ known_problems:
   - GitHub Pages settings require an authenticated GitHub browser session; current browser opened the settings URL logged out and received 404
   - Docker, GPU, and pytest runtime examples were not executed in this environment; lessons provide safe CPU/static verification paths
   - Official Codex/MCP references were link-checked, but product behavior remains version-sensitive and should be rechecked when the course is updated
-next_recommended_task: After GitHub login, set custom domain to dilzat.com, enable HTTPS after certificate issuance, then push the domain config and verify Pages/live routes
+next_recommended_task: After GitHub login, set custom domain to dilzat.com, enable HTTPS after certificate issuance, then verify custom-domain live routes
 files_currently_being_worked_on: []
 ```
 
