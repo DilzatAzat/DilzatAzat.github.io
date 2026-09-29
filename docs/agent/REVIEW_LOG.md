@@ -203,3 +203,10 @@
 - Removed the visible `/learn/` intro header while retaining page metadata for SEO.
 - Tightened catalog top spacing, category separation, grid gaps, and card padding so published courses start near the top and planned categories remain visually separated.
 - Verification passed: `bundle exec jekyll build`, `git diff --check`, generated `/learn/` content checks, and a local desktop browser preview; both published course links remain visible and functional.
+
+## 2026-09-30 - Custom domain configuration
+
+- Added the four GitHub Pages apex A records for `dilzat.com` in Aliyun DNS and saved `www CNAME -> dilzatazat.github.io` with both records enabled.
+- Updated Jekyll `url` to `https://dilzat.com` and added the root `CNAME` file containing `dilzat.com`.
+- GitHub Pages settings could not yet be opened because the browser session is logged out; GitHub returned 404 for the settings URL. No GitHub repository or Pages setting was changed.
+- `talkmap_out.ipynb` remains unrelated and unstaged.

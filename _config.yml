@@ -13,7 +13,7 @@ title                    : "Dilzat Azat"
 title_separator          : "-"
 name                     : &name "Dilzat Azat"
 description              : &description "Dilzat Azat，关注人工智能、深度学习与 AI for Science。"
-url                      : https://dilzatazat.github.io
+url                      : https://dilzat.com
 baseurl                  : ""
 # 用户主页：仓库名必须与 GitHub 用户名一致 → Dilzatazat.github.io（不能叫 Dilzat.github.io，否则只是项目页，根域名会 404）
 repository               : "DilzatAzat/Dilzatazat.github.io"
