@@ -192,3 +192,8 @@
 
 - Changed only the visible masthead brand label to `profile` in `_includes/masthead.html`; the site and SEO title in `_config.yml` remain unchanged.
 - Replaced the sidebar author bio in `_config.yml` with the requested USTC BS/MS education lines and rendered line breaks.
+
+## 2026-09-29 - Homepage profile update pushed
+
+- Committed the homepage/profile changes as `50da33b` (`Update homepage profile content`) and pushed `master` to `origin` through the existing command-scoped local proxy.
+- Confirmed `origin/master` resolves to `50da33b0b76188fd5a13da101e4c3bea5d696fb0`; unrelated `talkmap_out.ipynb` remains uncommitted.
