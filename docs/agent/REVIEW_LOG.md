@@ -217,3 +217,11 @@
 - GitHub Actions run `36609941670` and the `github-pages` deployment for that commit completed successfully. The default `https://dilzatazat.github.io/` site renders the updated build.
 - DNS resolves correctly, but the Pages deployment environment still reports `https://dilzatazat.github.io/`; `https://dilzat.com` currently returns HTTP 404 and HTTPS certificate-name mismatch while the custom-domain setting/certificate is pending.
 - Remaining human step: authenticate to GitHub, set repository Pages custom domain to `dilzat.com`, then enable Enforce HTTPS after certificate issuance.
+
+## 2026-09-30 - Custom domain activation and live verification
+
+- GitHub Pages settings now show custom domain `dilzat.com`, `DNS check successful`, and `Enforce HTTPS` enabled. The Pages site is deployed from the GitHub Actions workflow in run `36610424746`, which completed successfully for commit `e881580e711758337c0a954836f520d880fa5fc1`.
+- DNS resolves `dilzat.com` to all four GitHub Pages A records (`185.199.108.153` through `185.199.111.153`) and `www.dilzat.com` to `dilzatazat.github.io`.
+- Live HTTPS checks returned `200` for `/`, `/learn/`, `/learn/python/`, the Engineering & Agent for AI course home, and the representative Harness/Subagents lesson. `www.dilzat.com` redirects to `https://dilzat.com/`; both HTTP hostnames return the expected HTTPS `301` redirect. Page markers for the homepage, Python course, Engineering course, and Harness lesson are present.
+- `git ls-remote origin refs/heads/master` resolves to `e881580e711758337c0a954836f520d880fa5fc1`. No global/system proxy, DNS, firewall, or TLS configuration changed; the command-scoped local proxy remains required for GitHub API/Git operations.
+- Verification preserved the unrelated unstaged `talkmap_out.ipynb` change.
