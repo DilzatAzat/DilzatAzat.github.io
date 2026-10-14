@@ -1,0 +1,77 @@
+:root {
+  --home-paper: #fafbf8;
+  --home-ink: #202824;
+  --home-muted: #66716c;
+  --home-line: #dde4dc;
+  --home-accent: #5d8173;
+  --home-serif: Georgia, "Times New Roman", "Noto Serif SC", serif;
+  --home-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans SC", Arial, sans-serif;
+}
+
+.home-layout { margin: 0; background: var(--home-paper); color: var(--home-ink); font: 16px/1.7 var(--home-serif); }
+.home-layout a { color: inherit; text-decoration: none; border-bottom: 1px solid #bdc9c0; transition: color .2s, border-color .2s; }
+.home-layout a:hover { color: var(--home-accent); border-color: var(--home-accent); }
+.home-layout .home-topbar { display: flex; justify-content: space-between; align-items: center; max-width: 1480px; margin: auto; padding: 24px 40px 18px; font-family: var(--home-sans); }
+.home-layout .home-site-name { font: 18px var(--home-serif); border: 0; }
+.home-layout .home-topbar nav { display: flex; align-items: center; gap: 34px; color: #5b6560; font-size: 15px; }
+.home-layout .home-topbar nav a { border: 0; }
+.home-layout .home-language-toggle { border: 0; background: transparent; color: #5b6560; font: inherit; cursor: pointer; padding: 0; }
+.home-layout .home-page { max-width: 1480px; margin: auto; padding: 52px 40px 48px; }
+.home-layout .home-hero { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 68px; align-items: stretch; padding: 18px 0 72px; border-bottom: 1px solid var(--home-line); }
+.home-layout .home-hero-photo { width: 470px; height: 365px; margin: 0; background: #eef3ea; overflow: hidden; }
+.home-layout .home-hero-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 32%; filter: saturate(.82); }
+.home-layout .home-hero-copy { min-height: 365px; display: flex; flex-direction: column; }
+.home-layout .home-hero-copy h1 { font: 500 clamp(50px, 4.4vw, 62px)/1.12 var(--home-serif); letter-spacing: -.04em; margin: 0 0 30px; text-align: left; }
+.home-layout .home-bio { font-size: 19px; line-height: 1.68; max-width: 860px; color: #29342f; }
+.home-layout .home-bio p { margin: 0 0 10px; }
+.home-layout .home-bio p:last-child { margin-bottom: 0; }
+.home-layout .home-research-line strong { font-family: var(--home-sans); font-size: .68em; letter-spacing: .04em; text-transform: uppercase; color: var(--home-accent); }
+.home-layout .home-links { display: flex; flex-wrap: wrap; gap: 24px; margin-top: 23px; font: 15px var(--home-sans); }
+.home-layout .home-hero-copy > .home-links { margin-top: auto; }
+.home-layout .home-section { padding: 54px 0; border-bottom: 1px solid var(--home-line); }
+.home-layout .home-section-label { font: italic 28px/1.2 var(--home-serif); margin-bottom: 31px; text-align: left; }
+.home-layout .home-project-feature { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 68px; align-items: start; }
+.home-layout .home-project-image { width: 100%; height: auto; background: #fff; border: 1px solid var(--home-line); overflow: hidden; }
+.home-layout .home-project-image img { width: 100%; height: auto; object-fit: contain; background: #f4f6f2; display: block; }
+.home-layout .home-project-copy h2, .home-layout .home-row h2 { font: 500 27px/1.25 var(--home-serif); margin: 0 0 11px; }
+.home-layout .home-project-copy p { font-size: 17px; line-height: 1.65; color: #39453f; margin: 0 0 14px; }
+.home-layout .home-project-meta { font: italic 16px var(--home-serif) !important; color: var(--home-accent) !important; }
+.home-layout .home-project-links { display: flex; flex-wrap: wrap; gap: 20px; font-family: var(--home-sans); font-size: 14px; margin-top: 20px; }
+.home-layout .home-peture-project { border-top: 1px solid var(--home-line); padding-top: 28px; margin-top: 28px; }
+.home-layout .home-peture-image { background: #f5e8ea; }
+.home-layout .home-peture-image img { object-fit: contain; background: #f5e8ea; }
+.home-layout .home-split-section { display: grid; grid-template-columns: 470px minmax(0, 1fr); gap: 68px; }
+.home-layout .home-split-section .home-section-label { margin: 0; }
+.home-layout .home-rows { border-top: 1px solid var(--home-line); }
+.home-layout .home-row { display: grid; grid-template-columns: 1fr 135px; gap: 24px; align-items: start; padding: 20px 0; border-bottom: 1px solid var(--home-line); }
+.home-layout .home-row > div { grid-column: 1; grid-row: 1; }
+.home-layout .home-row time { grid-column: 2; grid-row: 1; font: 14px var(--home-sans); color: #718079; text-align: right; }
+.home-layout .home-row h2 { font-size: 23px; margin-bottom: 4px; }
+.home-layout .home-row p { font-size: 16px; color: var(--home-muted); margin: 0; }
+.home-layout .home-contact-copy .home-links { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 0; }
+.home-layout .home-footer { padding-top: 24px; color: var(--home-muted); font: 13px var(--home-sans); }
+
+@media (max-width: 800px) {
+  .home-layout .home-topbar { padding: 18px 18px 15px; }
+  .home-layout .home-topbar nav { gap: 13px; font-size: 13px; }
+  .home-layout .home-site-name { font-size: 16px; }
+  .home-layout .home-page { padding: 32px 18px 40px; }
+  .home-layout .home-hero { grid-template-columns: 112px 1fr; gap: 18px; align-items: start; padding: 8px 0 52px; }
+  .home-layout .home-hero-photo { width: 112px; height: 150px; }
+  .home-layout .home-hero-copy h1 { font-size: 36px; line-height: 1.14; margin: -4px 0 21px; }
+  .home-layout .home-bio { grid-column: 1 / -1; font-size: 17px; line-height: 1.68; margin-top: 8px; }
+  .home-layout .home-hero-copy .home-links { grid-column: 1 / -1; margin-top: 22px; }
+  .home-layout .home-hero-copy { min-height: 0; display: contents; }
+  .home-layout .home-links { font-size: 14px; gap: 16px; }
+  .home-layout .home-section { padding: 42px 0; }
+  .home-layout .home-section-label { font-size: 25px; margin-bottom: 24px; }
+  .home-layout .home-project-feature, .home-layout .home-split-section { display: block; }
+  .home-layout .home-project-image { width: 100%; margin-bottom: 18px; }
+  .home-layout .home-project-copy h2, .home-layout .home-row h2 { font-size: 23px; }
+  .home-layout .home-project-copy p, .home-layout .home-row p { font-size: 16px; line-height: 1.62; }
+  .home-layout .home-peture-project { margin-top: 28px; }
+  .home-layout .home-row { grid-template-columns: 1fr 90px; gap: 15px; }
+  .home-layout .home-row > div { grid-column: 1; }
+  .home-layout .home-row time { grid-column: 2; text-align: right; }
+  .home-layout .home-split-section .home-section-label { margin-bottom: 28px; }
+}
