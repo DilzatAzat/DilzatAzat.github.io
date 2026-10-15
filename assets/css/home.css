@@ -47,6 +47,8 @@
 .home-layout .home-row > div { grid-column: 1; grid-row: 1; }
 .home-layout .home-row time { grid-column: 2; grid-row: 1; font: 14px var(--home-sans); color: #718079; text-align: right; }
 .home-layout .home-row h2 { font-size: 23px; margin-bottom: 4px; }
+.home-layout .home-school-heading { display: flex; align-items: center; gap: 10px; }
+.home-layout .home-school-heading img { width: 31px; height: 31px; flex: 0 0 31px; object-fit: contain; }
 .home-layout .home-row p { font-size: 16px; color: var(--home-muted); margin: 0; }
 .home-layout .home-contact-copy .home-links { flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 0; }
 .home-layout .home-footer { padding-top: 24px; color: var(--home-muted); font: 13px var(--home-sans); }
@@ -68,6 +70,8 @@
   .home-layout .home-project-feature, .home-layout .home-split-section { display: block; }
   .home-layout .home-project-image { width: 100%; margin-bottom: 18px; }
   .home-layout .home-project-copy h2, .home-layout .home-row h2 { font-size: 23px; }
+  .home-layout .home-school-heading { gap: 8px; }
+  .home-layout .home-school-heading img { width: 27px; height: 27px; flex-basis: 27px; }
   .home-layout .home-project-copy p, .home-layout .home-row p { font-size: 16px; line-height: 1.62; }
   .home-layout .home-peture-project { margin-top: 28px; }
   .home-layout .home-row { grid-template-columns: 1fr 90px; gap: 15px; }
