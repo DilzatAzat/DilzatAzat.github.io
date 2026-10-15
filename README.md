@@ -1,101 +1,95 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Dilzat Azat · Personal Website & Learn
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+[![Deploy Jekyll site to Pages](https://github.com/DilzatAzat/DilzatAzat.github.io/actions/workflows/pages.yml/badge.svg)](https://github.com/DilzatAzat/DilzatAzat.github.io/actions/workflows/pages.yml)
+[![Website](https://img.shields.io/badge/website-dilzat.com-2563eb)](https://dilzat.com/)
 
-# Getting Started
+这是 [Dilzat Azat](https://github.com/DilzatAzat) 的个人网站与长期学习平台，线上地址为 [dilzat.com](https://dilzat.com/)。网站记录个人经历、研究兴趣、项目、演讲与学习内容，也用于持续建设面向 AI 实践的中文课程。
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+## 网站内容
 
-See more info at https://academicpages.github.io/
+- **个人主页**：个人简介、研究兴趣、项目、发表内容、演讲和联系方式。
+- **学习目录**：[`/learn/`](https://dilzat.com/learn/) 按主题组织课程和学习路径。
+- **Python for AI**：[`/learn/python/`](https://dilzat.com/learn/python/)，面向深度学习的 Python 前置课程，共 25 节已发布课程。
+- **Dive into Deep Learning**：[`/learn/d2l/`](https://dilzat.com/learn/d2l/)，原创中文深度学习课程，覆盖任务建模、数学、Tensor、自动微分、训练、计算机视觉、自然语言处理和项目实践，目前开放 96 节课程。
+- **Engineering & Agent for AI**：[`/learn/engineering-agent-for-ai/`](https://dilzat.com/learn/engineering-agent-for-ai/)，面向 AI 项目的工程基础与 Agent Engineering 实践课程，目前开放 22 节课程。
 
-### Additional Tutorials
+课程页面提供代码、公式、实验、练习和答案。学习进度只保存在访问者自己的浏览器中，不需要账号、后端服务或个人数据收集；进度记录也不等同于能力认证。
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+## 技术与部署
 
-## Running locally
+- [Jekyll](https://jekyllrb.com/)、Liquid、Sass 和原生 JavaScript
+- GitHub Actions 构建并部署到 GitHub Pages
+- 自定义域名由仓库根目录的 [`CNAME`](CNAME) 管理：`dilzat.com`
+- 课程目录和导航使用 `_data/` 中的 YAML 数据驱动
+- 本地学习进度使用浏览器存储，网站没有课程账号系统
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+每次向 `master` 或 `main` 分支推送时，`.github/workflows/pages.yml` 会构建 `_site` 并发布到 GitHub Pages。也可以在 Actions 页面手动触发部署。
 
-1. Clone the repository and made updates as detailed above.
+## 仓库结构
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+```text
+_pages/                 页面与课程入口
+_learning/              课程正文与课程集合
+_data/                  课程目录、导航和站点数据
+_layouts/               Jekyll 页面布局
+_includes/              可复用的 Liquid 组件
+_sass/                  站点样式与学习区域样式
+assets/                 JavaScript、图片和其他前端资源
+.github/workflows/      GitHub Pages 部署工作流
+files/                  可下载的课程和项目文件
+scripts/d2l/            课程检查与验证工具
+docs/agent/             项目路线、决策和验证记录
+CNAME                   自定义域名配置
+```
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+## 本地运行
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
-
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-## Using Docker
-
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
-
-You can build and execute the container by running the following command in the repository:
+需要 Ruby、Bundler；如果要修改或压缩前端脚本，再安装 Node.js。Windows、macOS 和 Linux 都可以使用下面的命令：
 
 ```bash
-chmod -R 777 .
+bundle install
+bundle exec jekyll serve --livereload --host 127.0.0.1
+```
+
+启动后访问 <http://127.0.0.1:4000/>。只想验证构建时可以运行：
+
+```bash
+bundle exec jekyll build
+```
+
+前端脚本检查和构建：
+
+```bash
+node --check assets/js/learning.js
+npm install
+npm run build:js
+```
+
+如果需要运行 D2L 课程的结构检查，先构建网站，再执行：
+
+```bash
+python scripts/d2l/check_course.py --site _site
+```
+
+仓库也提供 Docker 配置；已安装 Docker 时可以运行：
+
+```bash
 docker compose up
 ```
 
-You should now be able to access the website from `localhost:4000`.
+## 内容与开发约定
 
-### Using the DevContainer in VS Code
+- 新页面应沿用现有 Jekyll collection、layout、permalink 和数据文件约定。
+- 课程只有在正文、示例、练习、答案和必要验证准备好后才加入可见目录；规划中的课程不会伪装成已完成内容。
+- 学习材料使用原创讲解和示例，不复制受版权保护的教材正文。
+- 修改部署配置、路由或课程计数前，先运行构建和相关检查，并确认现有页面链接没有回归。
+- 项目状态、路线和验证证据保存在 [`docs/agent/`](docs/agent/) 中。
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+## 许可
 
-# Maintenance
+网站的课程正文、项目说明和定制页面由 Dilzat Azat 持续维护。仓库中的开源代码、第三方库和历史组件按 [`LICENSE`](LICENSE) 及各自依赖声明的许可使用；复用前请阅读对应许可文件。
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+## 联系
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
-
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
-
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+网站：<https://dilzat.com/><br>
+GitHub：<https://github.com/DilzatAzat>
