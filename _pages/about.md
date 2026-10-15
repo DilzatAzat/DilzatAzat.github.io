@@ -1,7 +1,6 @@
 ---
 layout: home
 permalink: /
-title: "Dilzat Azat · Personal Homepage"
 description: "Dilzat Azat's personal homepage: AI for Science, Agentic AI, software, and products."
 redirect_from:
   - /about/
